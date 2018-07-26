@@ -30,6 +30,9 @@ public class UserDetailsServiceImpl implements UserDetailsService {
 		try {
 			// 入力したユーザーIDから認証を行うユーザー情報を取得する
 			// 処理内容は省略
+        	user= new MLoginUser();
+        	user.setLoginUserId("user");
+        	user.setPassword("aa");
 		} catch (Exception e) {
 			// 取得時にExceptionが発生した場合
 			throw new UsernameNotFoundException("It can not be acquired User");

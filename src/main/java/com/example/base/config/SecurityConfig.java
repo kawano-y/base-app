@@ -27,20 +27,22 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
 	public void configure(WebSecurity web) throws Exception {
 		// セキュリティ設定を無視するリクエスト設定
 		// 静的リソース(images、css、javascript)に対するアクセスはセキュリティ設定を無視する
-		web.ignoring().antMatchers("/images/**", "/css/**", "/javascript/**", "/webjars/**");
+		web.ignoring().antMatchers("/resources/**");
+//		.antMatchers("/images/**", "/css/**", "/javascript/**", "/webjars/**");
 	}
 
 	@Override
 	protected void configure(HttpSecurity http) throws Exception {
 		// 認可の設定
-		http.authorizeRequests().antMatchers("/", "/index").permitAll() // indexは全ユーザーアクセス許可
+		http.authorizeRequests().antMatchers("/", "/index", "/**").permitAll() // indexは全ユーザーアクセス許可
+		
 				.anyRequest().authenticated(); // それ以外は全て認証無しの場合アクセス不許可
 
 		// ログイン設定
 		http.formLogin().loginProcessingUrl("/login") // 認証処理のパス
 				.loginPage("/index") // ログインフォームのパス
 				.failureHandler(new SampleAuthenticationFailureHandler()) // 認証失敗時に呼ばれるハンドラクラス
-				.defaultSuccessUrl("/menu") // 認証成功時の遷移先
+				.defaultSuccessUrl("/next") // 認証成功時の遷移先
 				.usernameParameter("login_id").passwordParameter("login_password") // ユーザー名、パスワードのパラメータ名
 				.and();
 

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="utf-8">
+<meta name="viewport"
+	content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="description" content="">
+<meta name="author" content="">
+<link rel="icon" href="../../favicon.ico">
+
+<title>Starter Template for Bootstrap</title>
+<link rel="canonical"
+	href="https://getbootstrap.com/docs/4.0/examples/starter-template/">
+
+<!-- Bootstrap core CSS -->
+<link
+	href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.2/css/bootstrap.min.css"
+	rel="stylesheet">
+
+<!-- Custom styles for this template -->
+<link th:href="@{/css/style.css}" rel="stylesheet"  type="text/css">
+</head>
+
+<body>
+
+
+	<div class="container" th:object="${indexForm}">
+		<div class="row">
+			<input type="hidden" th:value="*{index}">
+		</div>
+
+	</div>
+	<!-- /.container -->
+	<div id="loader-bg">
+		<div id="loader">
+			<img th:src="@{/images/gif-load.gif}" width="80" height="80"
+				alt="Now Loading..." />
+			<p>Now Loading...</p>
+		</div>
+	</div>
+	<div id="wrap">ロード後に表示させたい内容</div>
+
+	<!-- Bootstrap core JavaScript
+    ================================================== -->
+	<!-- Placed at the end of the document so the pages load faster -->
+	<script
+  src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+  integrity="sha256-3edrmyuQ0w65f8gfBsqowzjJe2iM6n0nKciPUp8y+7E="
+  crossorigin="anonymous"></script>
+	<script
+		src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.2/js/bootstrap.min.js"></script>
+	<script
+		src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.2/js/bootstrap.bundle.min.js"></script>
+	<script
+		src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+		<script th:src="@{/js/main.js}"></script>
+</body>
+</html>
