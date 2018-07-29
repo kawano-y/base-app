@@ -17,7 +17,10 @@ public class MainController {
 		return mv;
 	}
 
-	
+	@GetMapping("/e")
+	public ModelAndView error(ModelAndView mv){
+		throw new RuntimeException();
+	}
 	
 	
 }
