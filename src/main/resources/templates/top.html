@@ -22,13 +22,10 @@
 </head>
 
 <body>
-
-
 	<div class="container" th:object="${indexForm}">
 		<div class="row">
 			<input type="hidden" th:value="*{index}">
 		</div>
-
 	</div>
 	<!-- /.container -->
 	<div id="loader-bg">
@@ -53,6 +50,6 @@
 		src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.2/js/bootstrap.bundle.min.js"></script>
 	<script
 		src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
-		<script th:src="@{/js/main.js}"></script>
+		<script th:src="@{/js/loader.js}"></script>
 </body>
 </html>

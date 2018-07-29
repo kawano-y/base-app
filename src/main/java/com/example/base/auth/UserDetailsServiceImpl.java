@@ -44,7 +44,7 @@ public class UserDetailsServiceImpl implements UserDetailsService {
 		}
 
 		// ユーザー情報が取得できたらSpring Securityで認証できる形で戻す
-		return LoginUser.withUsername(user.getLoginUserId()).password("password")
+		return LoginUser.withUsername(user.getLoginUserId()).password("p")
 				.passwordEncoder(passwordEncoder::encode).roles("USER").build();
 	}
 
