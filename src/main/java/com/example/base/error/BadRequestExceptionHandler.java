@@ -11,9 +11,10 @@ import org.springframework.http.converter.HttpMessageNotReadableException;
 import org.springframework.web.HttpRequestMethodNotSupportedException;
 import org.springframework.web.bind.annotation.ControllerAdvice;
 import org.springframework.web.bind.annotation.ExceptionHandler;
+import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.servlet.NoHandlerFoundException;
 
-@ControllerAdvice
+@ControllerAdvice(annotations = RestController.class)
 public class BadRequestExceptionHandler {
 
     @ExceptionHandler(BadRequestException.class)

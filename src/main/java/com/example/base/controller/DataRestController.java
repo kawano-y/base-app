@@ -10,9 +10,13 @@ public class DataRestController {
 	public String data(){
 		return "data Rest";
 	}
-	@GetMapping("/e")
+	@GetMapping("/erros")
 	public String error(){
-		throw new RuntimeException()
-		;
+		if(true){
+			throw new RuntimeException()
+			;
+			
+		}
+		return "data";
 	}
 }
