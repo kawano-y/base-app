@@ -1,4 +1,4 @@
-package com.example.base.model;
+package com.example.base.resttemplate.anti.response;
 
 import lombok.Data;
 import lombok.EqualsAndHashCode;

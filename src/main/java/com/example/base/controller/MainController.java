@@ -10,6 +10,7 @@ import com.example.base.form.IndexForm;
 @RequestMapping("/main")
 @Controller
 public class MainController {
+	
 
 	@GetMapping("/input_form")
 	public ModelAndView index(IndexForm idexForm, ModelAndView mv){
@@ -22,5 +23,6 @@ public class MainController {
 		throw new RuntimeException();
 	}
 	
+
 	
 }

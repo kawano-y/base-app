@@ -1,11 +1,11 @@
-package com.example.base.model;
+package com.example.base.resttemplate.anti.response;
 
 import lombok.Data;
 
 @Data
 public class ResponseAbstract {
 
-	private String errorCode;
+	private Integer statusCode;
 	
 	private String message;
 }
