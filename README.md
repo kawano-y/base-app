@@ -7,4 +7,5 @@ html5 pattern
 
 https://qiita.com/ka215/items/795a179041c705bef03b
 
-jenkins ssss
+jenkins
+for /f "tokens=1" %%i in ('jps -l ^| find "Spring_Boot_Application.jar"') do taskkill /pid %%i /f
