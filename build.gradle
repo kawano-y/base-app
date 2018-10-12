@@ -29,8 +29,8 @@ dependencies {
 	compile('org.springframework.boot:spring-boot-starter-thymeleaf')
 	compile('org.springframework.boot:spring-boot-starter-web')
     compile('org.springframework.boot:spring-boot-starter-aop')
-	compile('io.springfox:springfox-swagger2:2.7.0') // http://localhost:8080/v2/api-docs が利用可能になります。
-    compile('io.springfox:springfox-swagger-ui:2.7.0') // http://localhost:8080/swagger-ui.html が利用可能になります。
+	compile('io.springfox:springfox-swagger2:2.9.2') // http://localhost:8080/v2/api-docs が利用可能になります。
+    compile('io.springfox:springfox-swagger-ui:2.9.2') // http://localhost:8080/swagger-ui.html が利用可能になります。
 	runtime('org.springframework.boot:spring-boot-devtools')
     compile('com.fasterxml.jackson.dataformat:jackson-dataformat-csv')
 	compileOnly('org.projectlombok:lombok')
