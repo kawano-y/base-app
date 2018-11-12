@@ -16,3 +16,13 @@ https://www.baeldung.com/swagger-2-documentation-for-spring-rest-api
 
 ## controller test
 https://qiita.com/ryo2132/items/ec10116238e1e1f333a1
+
+## junit結合テスト
+```
+		Resource resource = new ClassPathResource(file, getClass());
+
+		ResourceDatabasePopulator populator = new ResourceDatabasePopulator();
+		populator.addScript(resource);
+		populator.setContinueOnError(continueOnError);
+		populator.execute(data);
+```
