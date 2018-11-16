@@ -28,3 +28,11 @@ https://qiita.com/ryo2132/items/ec10116238e1e1f333a1
 ```
 - Fixture
 - @FromDataPoints
+
+## web開発注意事項
+
+- キャッシュ
+- ログ
+- 共通化
+- 例外処理
+
